@@ -1,0 +1,15 @@
+<section id="country-edit">
+    <h2>Editor</h2>
+    <div id="editor">
+        <form>
+            <fieldset><legend>Edit Head of State</legend>
+                <label for="code">Head of State: </label>
+                <input type="text" data-ng-model="selectedCountry.headofstate" id="code" /><br/>
+                <button data-ng-click="saveCountry()">Save</button>
+                <button data-ng-click="abandonEdit()">Cancel</button>
+            </fieldset>
+        </form>
+    </div>
+
+</section>
+

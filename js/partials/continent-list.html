@@ -1,0 +1,14 @@
+<section>
+    <table id="continent-table">
+        <tr style="text-align: center; font-weight: bold;">
+            <td>Code</td>
+            <td>Continent</td>
+        </tr>
+        <tr data-ng-repeat="continent in continents"
+            data-ng-click="selectContinent($event, continent)"
+            data-ng-class="{'selected':selectedContinent.ID===continent.ID}"
+            style="cursor: pointer; border: 1px solid black;">
+            <td>{{continent.ID}}</td><td>{{continent.Name}}</td>
+        </tr>
+    </table>
+</section>

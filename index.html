@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html lang="en" data-ng-app='GeoApp'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Geoworld</title>
+        <link rel="stylesheet" href="resources/assets/css/app.css">
+    </head>
+    <body>
+        <nav id="geoworld-header">
+            <div id="geoworld-header-left">
+                <h1><span class="geoworld-highlight">Geo</span>World</h1>
+            </div>
+            <div id="geoworld-header-right">
+                <a href="index.html"><h2>Home</h2></a>
+                <a href="/cm0665-assignment/#/login"><h2>Login</h2></a>
+                <a href="testing.php"><h2>Testing</h2></a>
+            </div>
+        </nav>
+        <main>
+            <section id="geoworld-banner">
+                <div id="geoworld-banner-image">
+                    <h1>GeoWorld</h1>
+                    <h2>The Globe At Your Fingertips</h2>
+                </div>
+            </section>
+            <section id="geoworld-search">
+                <div id="geoworld-search-bar-container">
+                    <!--  ng-minlength will only activate the filter once at least 3 characters have been entered.
+                          the data-ng-model allows the filter in country-list.html to use this input field as an expression in a filter
+                     -->
+                    <input ng-minlength="3" data-ng-model="searchText" id="geoworld-search-bar" placeholder="Search for a country..." type="text">
+                </div>
+            </section>
+            <section id="geoworld-continents">
+                <section id="main-title" data-ng-controller="IndexController">
+                    <!--refers to property defined in indexcontroller-->
+                    <h1>{{title}}</h1>
+
+                </section>
+                <section id="geoworld-tables">
+                    <article data-ng-controller="ContinentController" data-ng-include="'js/partials/continent-list.html'"></article>
+                    <article data-ng-view></article>
+                </section>
+
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+        <!-- load the basic angular libraries, though initially we'll only need the first two -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.js"></script>
+
+        <!-- link to our application files -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/services.js"></script>
+
+    </body>
+</html>

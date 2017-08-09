@@ -1,0 +1,23 @@
+<section id="country-table" style="position: relative;">
+    <div data-ng-show="detailsVisible"
+         data-ng-include="'js/partials/country-details.html'"
+         id="countryDetails"
+         class='details shadow'>
+    </div>
+    <table >
+        <tr style="text-align: center; padding: 10px; font-weight: bold;">
+            <th>A3Code</th>
+            <th>Name</th>
+            <th>Region</th>
+        </tr>
+        <!--The data-ng-model derivative on the search box in index.html allows for the use of the input field as an expression in a filter  -->
+        <tr data-ng-repeat="country in countries | filter: { countryname : searchText}"
+            data-ng-click="showDetailsCountry($event, country, 'countryDetails')"
+            data-ng-class="{'selected':selectedCountry.countrycode===country.countrycode}">
+
+            <td>{{country.countrycode}}</td>
+            <td>{{country.countryname}}</td>
+            <td>{{country.Region}}</td>
+        </tr>
+    </table>
+</section>

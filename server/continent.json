@@ -1,0 +1,25 @@
+{
+  "continentCount": 4,
+  "results":[
+    {
+      "continentcode": "ACT6BNN31",
+      "continenttitle": "APPLIED COMPUTING TECHNOLOGIES",
+      "department": "Computing"
+    },
+    {
+      "continentcode": "CNT1BNN23",
+      "continenttitle": "COMPUTER & NETWORK TECHNOLOGY",
+      "department": "Computing"
+    },
+    {
+      "continentcode": "CAE1BNN23",
+      "continenttitle": "COMPUTER AIDED ENGINEERING",
+      "department": "Computing"
+    },
+    {
+      "continentcode": "CFO1BNN23",
+      "continenttitle": "COMPUTER FORENSICS",
+      "department": "Computing"
+    }
+  ]
+}
